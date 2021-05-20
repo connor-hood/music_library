@@ -2,9 +2,30 @@ import React from 'react'
 
 const MusicTable = (props) => {
     return (
-        <div>
-            <h1>{props.id}</h1>
-        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Song</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Album Release Date</th>
+            </tr>
+            </thead>
+            <tbody>
+                {props.songs.map(track => {
+                    return (
+                        <tr key={track.id}>
+                            <td>{track.id}</td>
+                            <td>{track.title}</td>
+                            <td>{track.artist}</td>
+                            <td>{track.album}</td>
+                            <td>{track.release_date}</td>
+                        </tr>
+                    )
+                })}
+            </tbody>
+        </table>
     );
     }
 export default MusicTable;

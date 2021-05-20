@@ -17,13 +17,16 @@ class App extends Component {
         this.setState({
             songs: response.data
         });
+        console.log(this.state.songs)
+
+        return response
     }
     
     render() { 
         return ( 
             <div>
             <h1>Select your funky fresh tunes here!</h1>
-            <MusicTable />
+            <MusicTable songs={this.state.songs}/>
             </div>
          );
     }
