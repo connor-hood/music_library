@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import MusicTable from './musicTable';
 import axios from 'axios';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
      }
     
     componentDidMount(){
+        console.log("mount")
         this.getAllSongs();
     }
 
@@ -21,7 +23,7 @@ class App extends Component {
         return ( 
             <div>
             <h1>Select your funky fresh tunes here!</h1>
-            <button type="submit" onClick={this.getAllSongs()}>Display Songs</button>
+            <MusicTable />
             </div>
          );
     }
