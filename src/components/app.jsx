@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MusicTable from './musicTable';
+import MusicTable from './MusicTable/musicTable';
 import axios from 'axios';
 
 class App extends Component {
@@ -17,7 +17,6 @@ class App extends Component {
         this.setState({
             songs: response.data
         });
-        console.log(this.state.songs)
 
         return response
     }
