@@ -3,6 +3,7 @@ import MusicTable from './MusicTable/musicTable';
 import axios from 'axios';
 import './app.css';
 
+//TODO: Build search bar, song form, get delete button working
 class App extends Component {
     state = { 
         songs: []
@@ -20,6 +21,15 @@ class App extends Component {
         });
 
         return response
+    }
+
+    deleteSong(songId){
+        if(window.confirm('Are you sure?')){
+            let response = axios.get('http://127.0.0.1:8000/music' + songId)
+            this.setState({
+                songId: response.data
+            });
+        }
     }
     
     render() { 

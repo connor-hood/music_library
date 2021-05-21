@@ -1,5 +1,6 @@
 import React from 'react'
 import './musicTable.css'
+import DeleteButton from '../DeleteButton/deleteButton.jsx'
 
 const MusicTable = (props) => {
     return (
@@ -22,6 +23,7 @@ const MusicTable = (props) => {
                             <td>{track.artist}</td>
                             <td>{track.album}</td>
                             <td>{track.release_date}</td>
+                            <DeleteButton />
                         </tr>
                     )
                 })}
