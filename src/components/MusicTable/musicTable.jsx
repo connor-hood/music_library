@@ -8,7 +8,7 @@ const MusicTable = (props) => {
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Song</th>
+                <th>Song Title</th>
                 <th>Artist</th>
                 <th>Album</th>
                 <th>Album Release Date</th>
@@ -23,8 +23,9 @@ const MusicTable = (props) => {
                             <td>{track.artist}</td>
                             <td>{track.album}</td>
                             <td>{track.release_date}</td>
-                            <DeleteButton />
+                            <td><DeleteButton/></td>
                         </tr>
+                        
                     )
                 })}
             </tbody>

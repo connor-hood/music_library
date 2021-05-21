@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import MusicTable from './MusicTable/musicTable';
+import SongForm from './CreateSong/createSong';
 import axios from 'axios';
 import './app.css';
 
@@ -37,6 +38,8 @@ class App extends Component {
             <div>
             <h1>Select your funky fresh tunes here!</h1>
             <MusicTable songs={this.state.songs}/>
+            <h4>Create a new song:</h4>
+            <SongForm />
             </div>
          );
     }
