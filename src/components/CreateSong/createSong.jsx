@@ -23,6 +23,8 @@ class SongForm extends Component {
             album: response.data,
             release_date: response.data
         });
+        let newTable = await axios.get('http://127.0.0.1:8000/music/')
+        return newTable;
     }
 
     render() { 

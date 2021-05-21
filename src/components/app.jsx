@@ -20,7 +20,6 @@ class App extends Component {
         this.setState({
             songs: response.data
         });
-
         return response
     }
 
