@@ -5,7 +5,11 @@ th {
 td {
     color: red;
     text-align: center;
-    
+    border-right: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: aqua;
 }
 
 table{

@@ -23,13 +23,12 @@ class App extends Component {
         return response
     }
 
-    deleteSong(songId){
-        if(window.confirm('Are you sure?')){
-            let response = axios.get('http://127.0.0.1:8000/music' + songId)
-            this.setState({
-                songId: response.data
-            });
-        }
+    deleteSong = (index, e) => {
+        const songs = Object.assign([], this.state.songs);
+        songs.splice(index, 1);
+        this.setState({
+            songs: songs
+        })
     }
     
     render() { 

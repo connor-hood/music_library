@@ -4,7 +4,7 @@ import '../DeleteButton/deleteButton.css'
 const DeleteButton = (props) => {
 
     return(
-        <button>Delete </button>
+        <button onClick={props.deleteSong}>Delete </button>
     )
 }
  

@@ -20,7 +20,6 @@ class SongForm extends Component {
     };
 
     handleSubmit = (event) => {
-        event.preventDefault();
         alert(`Song Name: ${this.state.title} 
         Artist: ${this.state.artist} 
         Album: ${this.state.album}
