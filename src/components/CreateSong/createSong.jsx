@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 class SongForm extends Component {
     constructor(props) {
@@ -10,6 +10,7 @@ class SongForm extends Component {
             album: '',
             release_date: ''
          };
+         
     }
 
     handleChange = (event) => {
@@ -20,16 +21,20 @@ class SongForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        alert(`Song Name: ${this.state.title} Artist: ${this.state.artist} Album: ${this.state.album}
+        alert(`Song Name: ${this.state.title} 
+        Artist: ${this.state.artist} 
+        Album: ${this.state.album}
         Release Date: ${this.state.release_date}`)
+        this.createSong();
     }
 
     componentDidMount(){
          console.log("Hello")
-        //  this.createSong();
+         this.createSong();
      }
 
-    /* async createSong() {
+    async createSong() {
+        console.log(this.state)
         let response = await axios.post('http://127.0.0.1:8000/music/', this.state);
         console.log(response)
         this.setState({
@@ -38,7 +43,7 @@ class SongForm extends Component {
             album: response.data,
             release_date: response.data
         });
-    } */
+    }
 
     render() { 
         return ( 
