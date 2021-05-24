@@ -4,7 +4,7 @@ import SongForm from './CreateSong/createSong';
 import axios from 'axios';
 import './app.css';
 
-//TODO: Build search bar, song form, get delete button working
+//TODO: Build search bar, get delete button working
 class App extends Component {
     state = { 
         songs: []

@@ -34,9 +34,7 @@ class SongForm extends Component {
      }
 
     async createSong() {
-        console.log(this.state)
         let response = await axios.post('http://127.0.0.1:8000/music/', this.state);
-        console.log(response)
         this.setState({
             title: response.data,
             artist: response.data,
