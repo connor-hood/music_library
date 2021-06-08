@@ -55,7 +55,7 @@ class SongForm extends Component {
                     <label>Album</label>
                     <input type="text" name='album' id='album' onChange={this.handleChange}></input>
                     <br></br>
-                    <label>Release Date</label>
+                    <label>Release Date (In YYYY-MM-DD Format)</label>
                     <input type="text" name='release_date' id='release_date'onChange={this.handleChange}></input>
                     <br></br>
                     <input type='submit'/>
